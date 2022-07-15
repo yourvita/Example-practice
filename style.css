@@ -8,11 +8,15 @@
   --color: #222327;
 }
 
+a {
+  text-decoration: none;
+}
 ul {
   list-style: none;
 }
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -22,7 +26,6 @@ body {
 /* Header */
 .header {
   width: 400px;
-  height: 35px;
   background-color: var(--color);
 }
 
@@ -32,6 +35,7 @@ body {
 .parter__icon ul {
   display: flex;
   justify-content: space-between;
+  padding-top: 10px;
 }
 
 .parter__icon ul li:first-child {
@@ -48,19 +52,10 @@ body {
 
 .title {
   width: 100%;
-}
-
-.title::after {
-  content: "";
   background: url(/assets/background-maple.png);
   background-size: cover;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
+  padding: 5px 5px 5px 5px;
+  margin-bottom: 4px;
 }
 
 .title img {
@@ -86,12 +81,27 @@ body {
   border: none;
 }
 
+/* Navigation */
+.navigation__main {
+  width: 400px;
+  display: flex;
+}
+
+.navigation__main ul {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.navigation__main ul li {
+  margin-right: 8px;
+}
 .navigation {
   width: 400px;
   height: 70px;
   background-color: #fff;
   position: relative;
-  display: flex;
+  display: none;
+  /* flex로 바꿀 것 */
   justify-content: center;
   align-items: center;
   border-radius: 10px;
