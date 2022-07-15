@@ -8,12 +8,82 @@
   --color: #222327;
 }
 
+ul {
+  list-style: none;
+}
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: var(--color);
+}
+
+/* Header */
+.header {
+  width: 400px;
+  height: 35px;
+  background-color: var(--color);
+}
+
+.parter__icon {
+  margin-bottom: 20px;
+}
+.parter__icon ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.parter__icon ul li:first-child {
+  margin-left: 10px;
+}
+
+.parter__icon ul li:last-child {
+  margin-right: 10px;
+}
+
+.parter__icon ul li span {
+  display: none;
+}
+
+.title {
+  width: 100%;
+}
+
+.title::after {
+  content: "";
+  background: url(/assets/background-maple.png);
+  background-size: cover;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.title img {
+  width: 200px;
+}
+
+.title h1 {
+  display: none;
+}
+
+.title__search {
+  display: flex;
+}
+
+.title__search input {
+  width: 370px;
+  height: 35px;
+}
+
+.title__search button {
+  width: 30px;
+  height: 35px;
+  border: none;
 }
 
 .navigation {
@@ -34,7 +104,6 @@ body {
 
 .navigation ul li {
   position: relative;
-  list-style: none;
   width: 70px;
   height: 70px;
   z-index: 1;
